@@ -11,7 +11,7 @@
         <h1 class="h1 "> Contact manager </h1>
         <div class="ms-auto d-flex flex-row ">
             <form class="d-flex me-4">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control me-2" id="search-bar" type="search" onkeyup="filterContacts()" placeholder="Search" aria-label="Search">
             </form>
             <a class="btn btn-info" href="{{ url_for('add') }}">+ Add</a>
         </div>
@@ -26,6 +26,7 @@
 
     <div class="g-5 g-sm-1 g-md-2 g-lg-5 mx-5 row row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-1 ">
         {% for contact in contacts %}
+        <a id="contact-{{ contact.contact_id }}" href="{{ url_for('contact', contact_id=contact.contact_id) }}">
             <div class=" col  ">
                 <div class="card bg-white p-4">
                     <div class="d-flex w-30">
@@ -45,8 +46,21 @@
 
                 </div>
             </div>
+        </a>
 
         {% endfor %}
     </div>
+    <script>
+        function filterContacts() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue, unclean_data, contacts_object;
+          input = document.getElementById("search-bar");
+          filter = input.value.toUpperCase();
+          unclean_data = '{{contacts_dump}}';
+          console.log(unclean_data)
+          contacts_object = JSON.parse(unclean_data);
+          alert(contacts_object)
+        }
+    </script>
 </body>
 </html>

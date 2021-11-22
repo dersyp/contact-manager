@@ -14,6 +14,16 @@ h1{
   font-family: Product Bold;
 }
 
+a:link{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  text-decoration: none;
+  color: black;
+}
+
 .contact-image{
   border-radius: 100%;
   background-color: #06b8b2;

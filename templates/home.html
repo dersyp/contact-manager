@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> Contact manager </h1>
+    <li>
+        <ul> <a href="{{ url_for('add') }}">Add</a> </ul>
+    </li>
+    {% for contact_group in contact_groups %}
+        <li>{{ contact_group.group_name }}</li>
+    {% endfor %}
+    <h2> Contact list </h2>
+    {% for contact in contacts %}
+        <li>{{ contact.name }} / {{ contact.surname }}</li>
+    {% endfor %}
+</body>
+</html>

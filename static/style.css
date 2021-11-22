@@ -46,3 +46,14 @@ a:hover{
 .contact-info button{
   font-size: 12px;
 }
+html body a{
+  text-decoration: none !important;
+  color: black !important;
+}
+html body a:hover{
+  text-decoration: none !important;
+  color: black !important;
+}
+a:link{
+  color:black;
+}

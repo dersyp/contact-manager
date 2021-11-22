@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Product;
+  src: url("Product Sans Regular.ttf");
+}
+@font-face {
+  font-family: Product Bold;
+  src: url("Product Sans Bold.ttf");
+}
+
+* {
+  font-family: Product;
+}
+h1{
+  font-family: Product Bold;
+}

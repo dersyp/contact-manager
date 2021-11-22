@@ -24,7 +24,7 @@
          {% endfor %}
     </div>
 
-    <div class="g-5 g-sm-1 g-md-2 g-lg-5 mx-5 row row-cols-sm-1 row-cols-md-2 row-cols-lg-3  row-cols-3">
+    <div class="g-5 g-sm-1 g-md-2 g-lg-5 mx-5 row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-1 ">
         {% for contact in contacts %}
             <div class=" col  ">
                 <div class="card bg-white p-4">
@@ -34,8 +34,8 @@
                         </div>
                         <div class="w-70 contact-info d-flex ms-3 flex-column flex-fill">
                              <h5 class="card-title ">{{ contact.name }} {{ contact.surname }}</h5>
-                            <p class="card-text m-1">{{ contact.mail }}</p>
-                            <p class="card-text m-1">{{ contact.phone_number }}</p>
+                            <p class="card-text m-0" >{{ contact.phone_number }}</p>
+                            <p class="card-text m-1 mb-3" style="font-size: 12px">{{ contact.mail }}</p>
                             <div class="d-flex ms-auto">
                                 <button class="btn btn-light btn-outline-warning me-2">Edit</button>
                                 <button class="btn btn-light btn-outline-danger">Delete</button>

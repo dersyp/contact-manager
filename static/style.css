@@ -24,6 +24,27 @@ a:hover{
   color: black;
 }
 
+.btn-add{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 100px;
+  height: 100px;
+  z-index: 999;
+  color: white !important;
+}
+
+.btn-add:hover{
+  color: white !important;
+}
+
+.btn-add>p{
+  position: relative;
+  top: -25%;
+  font-family: Product Bold;
+  font-size: 80px;
+}
+
 .contact-image{
   border-radius: 100%;
   background-color: #06b8b2;
@@ -31,10 +52,14 @@ a:hover{
   width: 120px;
   height: 120px;
   text-align: center;
-}
-.contact-image>p{
   position: relative;
   top: 25%;
+}
+
+.contact-image>a>p{
+  position: relative;
+  top: 25%;
+  color : white;
 }
 .card-title{
   font-family: Product Bold;
@@ -45,4 +70,18 @@ a:hover{
 }
 .contact-info button{
   font-size: 12px;
+}
+html body a{
+  text-decoration: none !important;
+  color: black !important;
+}
+html body a:hover{
+  text-decoration: none !important;
+  color: black !important;
+}
+a:link{
+  color:black;
+}
+.contact-group{
+  border-radius: 2rem!important;
 }

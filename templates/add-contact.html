@@ -10,8 +10,9 @@
 </head>
 <body class="bg-light container-fluid m-auto px-0">
     <nav class="bg-white navbar d-flex px-5">
-        <h1 class="h1 "> Contact manager </h1>
+        <h1 class="h1 "> <a href="/"> Contact manager </a> </h1>
     </nav>
+    <h3 class="mt-5 text-center"> Add a new contact </h3>
     <form action=" {{ url_for('add') }} " method="post" class="d-flex flex-column m-auto" style="width: 40%;">
         <label for="name" class="form-label">Name:</label>
         <input required class="form-control" type="text" id="name" name="name"><br>
@@ -24,7 +25,7 @@
         <label class="form-label" for="address">Address:</label>
         <input class="form-control" type="text" id="address" name="address"><br>
         <label class="form-label" for="group_id">Contact group:</label>
-        <select name="group_id" id="group_id" multiple class="form-select mb-3">
+        <select name="group_id" id="group_id" class="form-select mb-3">
             {% for contact_group in contact_groups %}
                 <option value=" {{ contact_group.group_id }} ">{{ contact_group.group_name }}</option>
             {% endfor %}

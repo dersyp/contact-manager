@@ -34,11 +34,12 @@ class DatabaseManager:
                                                                     group_priority real,
                                                                     UNIQUE(group_name)
                                                                 ); """)
+            cur.execute(""" CREATE TABLE IF NOT EXISTS material (
+                                                                    material_id integer primary key,
+                                                                    name text NOT NULL,
+                                                                    quantity integer,
+                                                                    description text,
+                                                                    priority real
+                                                                ); """)
         except Error as e:
             print(e)
-
-    def initialize_database(self):
-        for group_name in group_list:
-            contact_group_repo = ContactGroupRepository(session=session)
-            contact_group_repo.add_contact_group(GroupPriority(group_name=group_name, group_priority=0.05))
-

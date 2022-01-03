@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
 from models import Base
-import json
+
 
 class Contact(Base):
     __tablename__ = "contact"

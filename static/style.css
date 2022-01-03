@@ -61,6 +61,13 @@ a:hover{
   top: 25%;
   color : white;
 }
+
+.contact-image>p{
+  position: relative;
+  top: 25%;
+  color : white;
+}
+
 .card-title{
   font-family: Product Bold;
 }

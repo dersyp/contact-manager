@@ -22,7 +22,11 @@
       <label class="form-label" for="quantity">Quantity:</label>
     <input  class="form-control" type="number" id="quantity" name="quantity" value="{{material_info.quantity}}"><br>
     <input type="hidden" name="priority" id="priority" value="{{material_info.priority}}">
-      <input type="submit" value="✅ Submit" class="btn btn-light btn-outline-success">
+      <div class="modal-footer">
+              <button href="/home-material" class="btn btn-light btn-outline-danger mr-auto" > ❌ Cancel </button>
+        <input type="submit" value="✅ Submit" class="btn btn-light btn-outline-success">
+
+      </div>
 
   </form>
 </body>
